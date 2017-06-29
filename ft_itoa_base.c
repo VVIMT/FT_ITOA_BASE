@@ -6,7 +6,7 @@
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/07 10:06:53 by exam              #+#    #+#             */
-/*   Updated: 2017/04/20 22:39:36 by vinvimo          ###   ########.fr       */
+/*   Updated: 2017/06/29 21:38:13 by vinvimo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ char	*ft_itoa_base(int value, int base)
 		nb = nb / base;
 		i++;
 	}
-	if (!(str = (char*)malloc(sizeof(char) * (i + sig))))
+	if (!(str = (char*)malloc(sizeof(char) * (i + sig + 2))))
 		return (NULL);
-	nb = i + sig;
+	nb = i + sig + 2;
 	while (nb >= 0)
 		str[nb--] = 0;
 	i--;
